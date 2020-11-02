@@ -1,0 +1,29 @@
+<style>
+    .ball {
+        position: relative;
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        background-color: cyan;
+        border-radius: 50%;
+        animation-name: fall;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes fall {
+        0% {
+            top: 0px;
+        }
+        50% {
+            top: 50%;
+        }
+        100% {
+            top: 0px;
+        }
+    }
+</style>
+<div class="ball">
+
+</div>
