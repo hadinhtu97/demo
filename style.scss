@@ -1,5 +1,0 @@
-@each $x in blue, red, green {
-    .text-#{$x} {
-        color: $x;
-    }
-} 
