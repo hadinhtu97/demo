@@ -1,4 +1,4 @@
-<!-- render a variable as html in react -->
+<!-- render a variable as html in react (like .html() in jQuery) -->
 <div id="preview" dangerouslySetInnerHTML={{ __html: variable }}></div>
 
 <!-- marked allows line break in js -->
@@ -12,3 +12,6 @@ document.addEventListener("keydown", this.handleKeyPress);
 
 <!-- settimeout function in js  -->
 setTimeOut(function,time);
+
+<!-- clear all interval when dont has variable in js -->
+for (var i = 1; i < 99999; i++) { window.clearInterval(i); }
