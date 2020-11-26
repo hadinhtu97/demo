@@ -19,3 +19,5 @@ for (var i = 1; i < 99999; i++) { window.clearInterval(i); }
 <!-- play pause audio in js --> 
 document.getElementById('audio').play();
 document.getElementById('audio').pause();
+<!-- add after pause to reset audio  -->
+document.getElementById('audio').currentTime = 0;
