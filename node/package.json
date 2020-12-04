@@ -1,0 +1,16 @@
+{
+    "author": "Tu Ha Dinh",
+    "description": "Testing when learning npm",
+    "keywords": [
+        "freecodecamp.org",
+        "github.com",
+        "codepen.io",
+        "relp.it"
+    ],
+    "license": "MIT",
+    "version": "0.0.1",
+    "dependencies": {
+        "moment": "~2.10.2",
+        "express": "^4.14.0"
+    }
+}
