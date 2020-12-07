@@ -13,8 +13,5 @@
         "express": "^4.14.0",
         "body-parser": "^1.15.2",
         "body-parse": "^0.1.0"
-    },
-    "scripts": {
-        "start": "app.js"
     }
 }
