@@ -8,7 +8,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/views/index.html");
 });
-app.use(express.static(__dirname + "/css/style.css"));
+app.use(express.static(__dirname + "/css"));
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
