@@ -30,3 +30,7 @@ http://twitter.com/intent/tweet?text=
 
 })
 event name: mouseover, mouseout, click
+
+<!-- kill a process in windows -->
+netstat -ano | findstr :<PORT>
+taskkill /PID <PID> /F
