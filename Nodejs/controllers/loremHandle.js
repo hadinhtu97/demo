@@ -1,3 +1,6 @@
-module.exports = () => {
-    
+
+function LoremHandle() {
+
 }
+
+module.exports = LoremHandle;
