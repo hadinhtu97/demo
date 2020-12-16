@@ -37,3 +37,6 @@ taskkill /PID <PID> /F
 
 <!-- redirect url in experssjs -->
 res.redirect(url)
+
+<!-- evaluates or executes an argument. -->
+eval(string)
