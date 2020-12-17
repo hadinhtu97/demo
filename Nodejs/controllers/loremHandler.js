@@ -1,3 +1,4 @@
+'use strict';
 
 function LoremHandler() {
     console.log('Hello World');

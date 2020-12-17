@@ -1,3 +1,5 @@
+'use strict';
+
 const express = require("express");
 const cors = require('cors');
 const bodyParser = require("body-parser");
@@ -8,9 +10,11 @@ const apiRoutes = require('./routes/api.js');
 const app = express();
 
 app.use(cors({ optionsSuccessStatus: 200 }));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(__dirname + "/public"));
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(express.static(__dirname + "/public"));
 app.route('/').get((req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 });

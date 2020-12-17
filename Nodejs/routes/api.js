@@ -1,3 +1,5 @@
+'use strict';
+
 const LoremHandler = require('../controllers/loremHandler.js');
 
 module.exports = (app) => {
