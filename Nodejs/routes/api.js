@@ -1,6 +1,6 @@
 const LoremHandler = require('../controllers/loremHandler.js');
 
-module.export = (app) => {
+module.exports = (app) => {
 
     const loremHandler = new LoremHandler();
 
