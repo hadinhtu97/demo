@@ -17,6 +17,11 @@ app.route('/').get((req, res) => {
 
 apiRoutes(app);
 
+app.use((req, res) => {
+    res.status(404);
+    res.send('Not Found');
+})
+
 app.listen(process.env.PORT || 3000, () => {
     console.log('Your app is listening on port ' + process.env.PORT);
 })
