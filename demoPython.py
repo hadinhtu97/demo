@@ -1,3 +1,4 @@
+#                   ----- String -----
 # x = 'This is a string!'
 # print(x)
 # print(x.upper())
@@ -14,6 +15,7 @@
 # x = 'He\'s name is \nJohn'
 # print(x)
 
+#                   ----- list, tuple, set, dict -----
 # ['apple', 'samsung', 'nokia'] list : ordered and changeable. Allows duplicate members.
 # ('apple', 'samsung', 'nokia') tuple : ordered and unchangeable. Allows duplicate members.
 # {'apple', 'samsung', 'nokia'} set :  unordered and unindexed. No duplicate members.
@@ -104,3 +106,101 @@
 # x.pop('open')
 # x.popitem()
 # print(x)
+
+#                   ----- Else If -----
+# else if
+# x = 1
+# y = 2
+# if x == y:
+#     print('x is equal to y')
+# elif x > y:
+#     print('x is greater than y')
+# else:
+#     print('x is less than y')
+# print('x is equal to y') if x == y else print(
+#     'x is greater than y') if x > y else print('x is less than y')
+
+
+#                   ----- Function -----
+# def my_function():
+#     print('Hello World!')
+
+
+# my_function()
+
+# def my_function(*key):
+#     print(key[1])
+
+
+# my_function('apple', 'banana', 'orange')
+
+# def my_function(**key):
+#     print('He name is ' + key['name'])
+#     print('He age is ' + key['age'])
+
+
+# my_function(name='Tu', age='20')
+
+# lambda
+# def my_function(x): return lambda a: a+x
+# print(my_function(1)(2))
+
+#                   ----- Class -----
+# class Person:
+#     name = 'Tu'
+#     age = 20
+# Iam =  Person()
+# print(Iam.name)
+# print(Iam.age)
+
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def hello(self):
+#         print('My name is: ' + self.name)
+
+
+# person1 = Person('Tu', 20)
+# print(person1.name)
+# print(person1.age)
+# person1.hello()
+
+# class Student(Person):
+#     pass
+# stu = Student('Tu',20)
+# stu.hello()
+
+# class Student(Person):
+#     def __init__(self, name, age):
+#         Person.__init__(self, name, age)
+#         self.nameAndAge = name + str(age)
+
+
+# stu = Student('Ha Dinh Tu', 20)
+# stu.hello()
+# print(stu.nameAndAge)
+
+# import platform
+# import datetime
+# import json
+# print(platform.system())
+# print(datetime.datetime.now())
+# x = '{"name" : "Tu", "age" : 20}'
+# y = json.loads(x) # y is a dict
+# x = {'name': 'Tu', 'age': 20}
+# y = json.dumps(x) # y is a string
+
+
+#                   ----- Input -----
+# username = input('Enter User Name: ')
+# print('user name is: ' + username)
+
+# word = "bananana"
+# i = word.find("na")
+# print(i)
+
+# counts = {'quincy': 1, 'mrugesh': 42, 'beau': 100, '0': 10}
+# print(counts.get('kris', 0))
+# print(counts)
