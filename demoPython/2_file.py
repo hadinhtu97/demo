@@ -1,40 +1,25 @@
-import numpy as np
+import os
 
-# print(np.__version__)
+# f = open('demo.txt')
 
-# arrList = np.array([1, 2, 3, 4, 5])
-# arrTurpe = np.array((1, 2, 3, 4, 5))
-# arrSet = np.array({1, 2, 3, 4, 5})
+# print(f)
 
-# print(arrList)
-# print(type(arrList))
-# print(arrTurpe)
-# print(type(arrTurpe))
-# print(arrSet)
-# print(type(arrSet))
+# print(f.read())
+# print(f.read(5))
 
-# arr = np.array([1, 2, 3], ndmin=3)
-# print(arr)
-# print(arr.ndim)
+# print(f.readline())
+# print(f.readline())
 
-# arr = np.array([[1, 2, 3], [3, 4, 5]])
-# print(arr[0][0])
-# print(arr[0, 0])
+# f = open('demo.txt', 'a')
+# f.write('\nAdd 1 line')
+# f.close
 
-# arr = np.array([1, 'a', 3, 4, 5])
-# print(arr.dtype)
+# f = open('demo.txt', 'r')
+# print(f.read())
 
-# arr = np.array([1, 2, 3])
-# newArr = arr.copy()
-# arr[1] = 14
-# print(arr)
-# print(newArr)
+# You should always close your files,
+# in some cases, due to buffering,
+# changes made to a file may not show until you close the file.
+# f.close()
 
-# arr = np.array([1, 2, 3])
-# newArr = arr.view()
-# arr[1] = 14
-# print(arr)
-# print(newArr)
-
-arr = np.array([1, 2, 3])
-print(arr.shape)
+os.remove('demo.txt')
