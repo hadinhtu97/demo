@@ -93,10 +93,10 @@ import numpy as np
 #     print(index, x)
 
 
-# ARRAY SEARCH
-arr = np.array([1, 2, 3, 4, 5])
-x = np.where(arr == 2)
-y = np.where(arr % 2 == 1)
-# the return is index, not the value
-print(x)
-print(y)
+# # ARRAY SEARCH
+# arr = np.array([1, 2, 3, 4, 5])
+# x = np.where(arr == 2)
+# y = np.where(arr % 2 == 1)
+# # the return is index, not the value
+# print(x)
+# print(y)
