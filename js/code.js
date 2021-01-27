@@ -32,7 +32,7 @@ on('event name', function (envent, d) {
 eventname: mouseover, mouseout, click
 
 /* redirect url in experssjs */
-res.redirect(url)
+res.redirect('/')
 
 /* evaluates or executes an argument. */
 eval(string)
@@ -41,3 +41,14 @@ eval(string)
 var pathname = window.location.pathname; // Returns path only (/path/example.html)
 var url = window.location.href;     // Returns full URL (https://example.com/path/example.html)
 var origin = window.location.origin;   // Returns base URL (https://example.com)
+
+// bcrypt async:
+bcrypt.hash(string, 12, (err, hash) => {
+    //exam hash: $2b$12$/51RX2Jpp11h.J9CQXUhEuMxHQTipXUyZUTi1eAGclY5KNLCzD6gy
+})
+bcrypt.compare(string, hash, (err, res) => {
+    //res is True of False
+})
+// bcrypt sync:
+hash = bcrypt.hashSync(string, 12); //exam hash: $2b$12$/51RX2Jpp11h.J9CQXUhEuMxHQTipXUyZUTi1eAGclY5KNLCzD6gy
+res = bcrypt.compareSync(string, hash); //res is True of False
