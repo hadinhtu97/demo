@@ -96,6 +96,9 @@ helmet.contentSecurityPolicy({
     }
 })
 
+//
+helmet.referrerPolicy({policy: 'same-origin'})
+
 // Configure Helmet Using the ‘parent’ helmet()
 // app.use(helmet()) will automatically include all the middleware introduced above, except noCache(), and contentSecurityPolicy(), but these can be enabled if necessary.
 // You can also disable or configure any other middleware individually, using a configuration object.
