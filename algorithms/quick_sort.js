@@ -4,7 +4,6 @@
 // We then combine the result of recursively calling the quick sort algorithm on both sub-arrays.
 // This continues until the base case of an empty or single-item array is reached, which we return
 // The unwinding of the recursive calls return us the sorted array.
-
 // Quick sort is a very efficient sorting method, providing O(nlog(n)) performance on average.
 // It is also relatively easy to implement. 
 // These attributes make it a popular and useful sorting method.

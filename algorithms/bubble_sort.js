@@ -5,7 +5,6 @@
 // The method continues looping through the array until no swaps occur at which point the array is sorted.
 // This method requires multiple iterations through the array and for average 
 // and worst cases has quadratic time complexity. 
-// While simple, it is usually impractical in most situations.
 
 const bubleSort = (arr) => {
     for (let i = 0; i < arr.length; i++) {

@@ -3,7 +3,6 @@
 // It then starts at the second position, selects the smallest value in the remaining list,
 // and swaps it with the second element.
 // It continues iterating through the list and swapping elements until it reaches the end of the list. 
-// Now the list is sorted. Selection sort has quadratic time complexity in all cases.
 
 const selectionSort = (arr) => {
     for (let i = 0; i < arr.length; i++) {

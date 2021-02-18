@@ -1,9 +1,7 @@
 // Merge sort also uses a divide - and - conquer, recursive methodology to sort an array.
 // Recursively split the input array in half until a sub-array with only one element is produced.
 // Merge each sorted sub-array together to produce the final sorted array.
-
 // Merge sort is an efficient sorting method, with time complexity of O(nlog(n)). 
-// This algorithm is popular because it is performant and relatively easy to implement.
 
 const mergeSort = (arr) => {
 
