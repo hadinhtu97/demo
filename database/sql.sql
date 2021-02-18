@@ -1,4 +1,3 @@
-
 --  select 
 SELECT *
 FROM table_name;
