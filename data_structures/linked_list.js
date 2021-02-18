@@ -111,3 +111,56 @@ const LinkedList = function () {
         return current.element
     }
 }
+
+// DoublyLinkedList
+
+var Node = function (data, prev) {
+    this.data = data;
+    this.prev = prev;
+    this.next = null;
+};
+var DoublyLinkedList = function () {
+    this.head = null;
+    this.tail = null;
+    let length = 0;
+
+    this.add = (data) => {
+        if (length == 0) {
+            let node = new Node(data, null)
+            this.head = node
+            this.tail = node
+        } else {
+            let lastNode = this.tail
+            let newNode = new Node(data, lastNode)
+            lastNode.next = newNode
+            this.tail = newNode
+        }
+        length++
+    }
+
+    this.remove = (data) => {
+        if (length == 0) {
+            return null
+        } else {
+            if (this.head.data == data) {
+                this.head = this.head.next
+                length--
+            } else if (this.tail.data == data) {
+                this.tail = this.tail.prev
+                this.tail.next = null
+                length--
+            } else {
+                let current = this.head
+                while (current) {
+                    if (current.next && current.next.data == data) {
+                        current.next = current.next.next
+                        current.next.prev = current
+                    } else {
+                        current = current.next
+                    }
+                }
+            }
+        }
+    }
+
+};
