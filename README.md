@@ -50,4 +50,4 @@ I said :
 this `code` is inline
 
 ## Emoji :
-I can also add an emoji :joy: to this file
+I can also add an emoji :joy:
