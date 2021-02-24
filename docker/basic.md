@@ -122,7 +122,7 @@ Restarting a container that has been previously stopped or killed
 ![img](img/restart-container.png)
 
 Rebooting a running container
-> `docker container restart <container identify>
+> `docker container restart <container identify>`
 
 ![img](img/reboot-container.png)
 
