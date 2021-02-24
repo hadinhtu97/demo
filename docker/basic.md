@@ -43,6 +43,7 @@ __The engine consists of three major components:__
 3. __REST API__: The REST API acts as a bridge between the daemon and the client. Any command issued using the client passes through the API to finally reach the daemon.
 
 __When you execute `docker run hello-work`__
+
 ![img](img/full-picture.svg)
 * Docker client reaches out to the daemon, tells it to get the hello-world image and run a container from that.
 * Docker daemon looks for the image within your local repository and realizes that it's not there, resulting in the Unable to find image 'hello-world:latest' locally that's printed on your terminal.
