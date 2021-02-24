@@ -72,3 +72,5 @@
   * `git remote -v` : List the remote connections you have to other repositories.
 * `git push <REMOTE_NAME> <BRANCH>` : push change in local repo branch to remote repo
 * `git clone <REMOTE_REPO_URL>` : clone a remote repo
+* `git tag -a <v1.1> -m <description>` : creating a tag
+  * `git push origin --tags` : push tags to remote
