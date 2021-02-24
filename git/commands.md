@@ -1,6 +1,6 @@
 # Git commands basic
 
-# Workflow
+## Workflow
 * ![img](images/workflow.png)
 * If you consider a file in your Working Directory, it can be in three possible states :
   * __It can be staged__. Which means the files with the updated changes are marked to be committed to the local repository but not yet committed.
@@ -15,10 +15,10 @@
   * `git config --global user.email <YOUR_EMAIL>`
 
 ## Commit
-* `git add` : stage change
+* `git add` : add files into staging area
   * `git add <file>`
   * `git add .`
-* `git commit -m <subject>` : commit stage changed . previous commit is prrent of this commit
+* `git commit -m <subject>` : commit stage changed . the parent of this commit is the previous commit
   * `git commit -m <subject> -m <description>`
   * ![commit](images/commit.png)
 * `git status` : check status
