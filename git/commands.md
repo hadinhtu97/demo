@@ -1,12 +1,28 @@
 # Git commands basic
 
+# Workflow
+* ![img](images/workflow.png)
+* If you consider a file in your Working Directory, it can be in three possible states :
+  * __It can be staged__. Which means the files with the updated changes are marked to be committed to the local repository but not yet committed.
+  * __It can be modified__. Which means the files with the updated changes are not yet stored in the local repository.
+  * __It can be committed__. Which means that the changes you made to your file are safely stored in the local repository.
+
+## Setup git
+* Install git :  `sudo apt install git`
+* Check git version : `git --version`
+* Config git : 
+  * `git config --global user.name <YOUR_USERNAME>`
+  * `git config --global user.email <YOUR_EMAIL>`
+
 ## Commit
 * `git add` : stage change
   * `git add <file>`
   * `git add .`
-* `git commit -m 'subject'` : commit stage changed . previous commit is prrent of this commit
-  * `git commit -m 'subject' -m 'description'`
+* `git commit -m <subject>` : commit stage changed . previous commit is prrent of this commit
+  * `git commit -m <subject> -m <description>`
   * ![commit](images/commit.png)
+* `git status` : check status
+* `git diff` : view files changes not yet staged
 
 ## Branch
 * `git branch` : view all branch
@@ -49,3 +65,9 @@
   * `git revert HEAD`
   * ![img](images/revert.png)
   * new commit C2' introduces changes -- it just happens to introduce changes that exactly reverses the commit of C2.
+
+## Remote
+* `git remote add origin <REMOTE_REPO_URL>` : set new remote
+  * `git remote -v` : List the remote connections you have to other repositories.
+* `git push <REMOTE_NAME> <BRANCH>` : push change in local repo to remote repo
+* `git clone <REMOTE_REPO_URL>` : clone a remote repo
