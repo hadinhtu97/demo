@@ -28,7 +28,8 @@
 * `git branch` : view all branch
   * `git branch <name>` : create new branch
   * `git branch -d <name>` : delete a branch
-  * `git checkout <name>` : move to branch name
+  * `git checkout <name>` : move to branch name from current branch
+  * `git checkout <name> <branch_exits>` : create a branch from an exits branch
   * `git checkout -b <name>` : create and move to new branch
 
 ## Combine branch
@@ -69,5 +70,5 @@
 ## Remote
 * `git remote add origin <REMOTE_REPO_URL>` : set new remote
   * `git remote -v` : List the remote connections you have to other repositories.
-* `git push <REMOTE_NAME> <BRANCH>` : push change in local repo to remote repo
+* `git push <REMOTE_NAME> <BRANCH>` : push change in local repo branch to remote repo
 * `git clone <REMOTE_REPO_URL>` : clone a remote repo
