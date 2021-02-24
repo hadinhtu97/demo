@@ -50,4 +50,102 @@ __When you execute `docker run hello-work`__
 * Docker daemon then creates a new container from the freshly pulled image.
 * Finally Docker daemon runs the container created using the hello-world image outputting the wall of text on your terminal.
 
+## Container manipulation
 
+### Run a container
+> `docker run <image name>`
+
+This is a perfectly valid command, but there is a better way of dispatching commands to the docker daemon : 
+> `docker <object> <command> <options>`
+
+With:
+* `object` indicates the type of Docker object you'll be manipulating. This can be a `container`, `image`, `network` or `volume` object.
+* `command` indicates the task to be carried out by the daemon, that is the `run` command.
+* `options` can be any valid parameter that can override the default behavior of the command, like the `--publish` option for port mapping.
+
+The `run` command can be written :
+> `docker container run <image name>`
+
+Exam :
+> `docker container run --publish 8080:80 fhsinchy/hello-dock`
+
+### Publish a port
+Containers are isolated environments. Your host system doesn't know anything about what's going on inside a container. Hence, applications running inside a container remain inaccessible from the outside.
+
+To allow access from outside of a container, you must publish the appropriate port inside the container to a port on your local network. The common syntax for the --publish or -p option is as follows:
+> `--publist <host port>:<container port>`
+
+### Detached mode
+In order for the container to keep running, you had to keep the terminal window open. Closing the terminal window also stopped the running container.
+
+In order to override this behavior and keep a container running in background, you can include the --detach option.
+
+Exam:
+> `docker container run --detach --publish 8080:80 fhsinchy/hello-dock`
+
+> Note: The order of the options you provide doesn't really matter. If you put the --publish option before the --detach option, it'll work just the same. But the image name must come at last. 
+
+### List container
+* `docker container ls` :  list out containers that are currently running.
+* `docker container ls --all` or `docker container ls -a` : list out the containers that have run in the past
+
+### Name and rename container
+By default, every container has two identifiers :
+* __CONTAINER ID__ - a random 64 character-long string.
+* __NAME__ - combination of two random words, joined with an underscore.
+* 
+![img](img/list-container.png)
+
+Naming a container can be achieved using the `--name` option.
+
+Exam:
+> ~docker container run -d -p 8080:80 --name hello-dock fhsinchy/hello-dock
+
+![img](img/list-container2.png)
+
+To rename old containers using the container rename command.
+> `docker container rename <container identify> <new name>`
+
+![img](img/rename-container.png)
+
+### Stop container 
+* `docker container stop <container identifier>`
+* `docker container kill <container identifier>`
+
+![img](img/stop-container.png)
+
+### Restart container 
+Restarting a container that has been previously stopped or killed
+> `docker container start <container identify>`
+
+![img](img/restart-container.png)
+
+Rebooting a running container
+> `docker container restart <container identify>
+
+![img](img/reboot-container.png)
+
+### Create container without run
+Use command `create` to create a container from given image
+![img](img/create-container.png)
+
+### Delete container
+Use command `rm` to remove a container
+![img](img/delete-container.png)
+You can use `--rm` option in `container run` or `container start` to make container removed when it stopped
+![img](img/delete-container2.png) 
+
+### Run container in interactive mode
+Images like ubuntu, fedora, python, node ,...  do not just run some pre-configured program. These are instead configured to run a shell by default.
+
+An image configured to run such a program is an interactive image. These images require a special `-it` option to be passed in the container run command.
+
+Without `-it` option, you'll see nothing happend: 
+![img](img/run-container-with-no-it-option.png)
+
+With `-it` opotion, you'll entry to the bash of container:
+![img](img/run-container-with-it-option.png)
+
+The `-it` option sets the stage for you to interact with any interactive program inside a container. This option is actually two separate options mashed together :
+* The `-i` or `--interactive` option connects you to the input stream of the container, so that you can send inputs to bash.
+* The `-t` or `--tty` option makes sure that you get some good formatting and a native terminal-like experience by allocating a pseudo-tty.
