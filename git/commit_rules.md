@@ -1,7 +1,7 @@
 # Rules of great git commit message
 
 ## Format of commit
-__<type><scope>: <message>__
+__`<type><scope>: <message>`__
 
 __Type__
 * `feat` : The new feature you're adding to a particular application
@@ -23,11 +23,17 @@ __Scope__
 
 __Examples__ 
 > `feat: add login page`
+
 > `fix: make links open in new tab`
+
 > `docs: add documentation of project`
+
 > `style: add missing semi-colons`
+
 > `refactor: change name function getUser to getUserData`
+
 > `test: test valid data when fech from database`
+
 > `chore: ignore env to .gitignore`
 
 ## Separate subject from body with a blank line
