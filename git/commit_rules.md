@@ -1,18 +1,35 @@
 # Rules of great git commit message
 
-## Types of commit: 
+## Format of commit
+__<type><scope>: <message>__
+
+__Type__
 * `feat` : The new feature you're adding to a particular application
 * `fix` : A bug fix
 * `docs` : Documentation only changes
 * `style` : Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 * `refactor` : A code change that neither fixes a bug nor adds a feature
-* `perf` : A code change that improves performance
 * `test` : Adding missing tests or correcting existing tests
-* `build` : A code change that improves performance
-* `ci` : Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
-* `chore` : Regular code maintenance.
-  
-You can also use emojis to represent commit types
+* `chore` : Updating grunt tasks etc; no production code change
+
+__Scope__
+* `init`
+* `runner`
+* `watcher`
+* `config`
+* `web-server`
+* `proxy`
+* etc.
+
+__Examples__ 
+> `feat: add login page`
+> `fix: make links open in new tab`
+> `docs: add documentation of project`
+> `style: add missing semi-colons`
+> `refactor: change name function getUser to getUserData`
+> `test: test valid data when fech from database`
+> `chore: ignore env to .gitignore`
+
 ## Separate subject from body with a blank line
 ```
 Derezz the master control program
