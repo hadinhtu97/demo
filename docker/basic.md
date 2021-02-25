@@ -186,6 +186,11 @@ To build image from Dockerfile above, open terminal in the directory of Dockerfi
 
 ![img](img/build-image.png)
 
+__NOTE__ : when run commands above, docker will automatic run the Dockerfile file. Use `--file` option to build specific file
+
+Exam, build an image from `Dockerfile.dev` file:
+> `docker image build --file Dockerfile.dev .`
+
 Now you can run this image 
 > `docker container run --rm -d -p 8080:80 --name custom-nginx 3199372aa3fc`
 
