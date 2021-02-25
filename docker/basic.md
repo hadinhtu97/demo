@@ -160,7 +160,9 @@ Image command can be use by :
 
 Like container, you can use
 > `docker image ls`
+
 > `docker image rm <image identify>`
+
 > `docker image prune --force` : to remove all un-tagged images
 
 ### Create a image
