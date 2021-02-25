@@ -150,3 +150,81 @@ With `-it` opotion, you'll entry to the bash of container:
 The `-it` option sets the stage for you to interact with any interactive program inside a container. This option is actually two separate options mashed together :
 * The `-i` or `--interactive` option connects you to the input stream of the container, so that you can send inputs to bash.
 * The `-t` or `--tty` option makes sure that you get some good formatting and a native terminal-like experience by allocating a pseudo-tty.
+
+## Image manipulation
+
+Image command can be use by :
+> `docker image <command> <option>`
+
+### List and remove image
+
+Like container, you can use
+> `docker image ls`
+> `docker image rm <image identify>`
+> `docker image prune --force` : to remove all un-tagged images
+
+### Create a image
+
+Dockerhub has a ton of pre-built images suitable for development, but you can create images your own.
+
+A `Dockerfile` is a collection of instructions that, once processed by the daemon, results in an image. Exam : 
+
+![img](img/exam-dockerfile.png)
+
+Images are multi-layered files and in this `Dockerfile` above, each line (known as instructions) that you've written creates a layer for your image.
+* Every valid `Dockerfile` starts with a `FROM` instruction. This instruction sets the base image for your resultant image.
+* The `EXPOSE` instruction is used to indicate the port that needs to be published.
+* The `RUN` instruction in a Dockerfile executes a command inside the container shell.
+* The `CMD` instruction sets the default command for your image. 
+
+When you have a Dockerfile, you can build a image from it
+
+To build image from Dockerfile above, open terminal in the directory of Dockerfile :
+> `docker image build .`
+
+![img](img/build-image.png)
+
+Now you can run this image 
+> `docker container run --rm -d -p 8080:80 --name custom-nginx 3199372aa3fc`
+
+### Naming and tagging image
+
+In above, you created an image but this image have no name and tag
+
+![img](img/image-not-tag.png)
+
+You can naming and tagging an image when creating it by use `--tag` or `-t` option
+> `docker image build -t <image name>:<image tag> .`
+
+![img](img/image-tagged.png)
+
+__NOTE__ : when you run a container but not specify the tag of image, docker will automatic run the `latest` tag
+
+![img](img/run-container-with-no-img-tag.png)
+
+![img](img/run-container-with-img-tag.png)
+
+### Share image in Docker Hub
+
+Login docker in terminal : 
+
+![img](img/login-docker.png)
+
+To share image online , the image has to be tagged by : `<username>/<image name>:<image tag>`
+
+![img](img/image-tag-to-push.png)
+
+Then you can push to dockerhub
+
+![img](img/image-push-to-dockerhub.png)
+
+In dockerhub: 
+
+![img](img/docker-hub-repos.png)
+
+### Download image from Dockerhub
+
+> `docker pull <imagename>`
+
+Exam: `docker pull hadinhtu97/custom-nginx`
+
